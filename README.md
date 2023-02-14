@@ -53,9 +53,10 @@ If you would like to contribute to this project, please follow these steps:
 1.  Fork this repository.
 2.  Create a new branch with a descriptive name (`feature/new-endpoint`).
 3.  Make your changes.
-4.  Commit your changes with a clear and concise message.
-5.  Push your changes to your forked repository.
-6.  Create a pull request and describe your changes.
+4.  Run tests: `docker-compose run --rm api python manage.py test`
+5.  Commit your changes with a clear and concise message.
+6.  Push your changes to your forked repository.
+7.  Create a pull request and describe your changes.
 
 **Important Notice:**  
 
