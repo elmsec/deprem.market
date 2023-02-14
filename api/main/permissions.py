@@ -49,7 +49,6 @@ class IsSuperUserOrCanRegisterAndViewListOnly(permissions.BasePermission):
             (
                 request.user.is_authenticated is False
                 and
-                (view.action == 'register' and request.method == 'POST') or
-                request.method in permissions.SAFE_METHODS
+                (view.action == 'register' and request.method == 'POST')
             )
         )
