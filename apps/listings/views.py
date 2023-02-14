@@ -2,8 +2,8 @@ from rest_framework import viewsets, permissions
 
 from deprem.permissions import IsSuperUserOrReadOnly
 
-from .models import Listing, Category
-from .serializers import ListingSerializer, CategorySerializer
+from listings.models import Listing, Category
+from listings.serializers import ListingSerializer, CategorySerializer
 
 
 class ListingViewSet(viewsets.ModelViewSet):
