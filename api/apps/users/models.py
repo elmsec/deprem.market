@@ -6,8 +6,6 @@ from main.models import BaseModel
 
 
 class User(AbstractUser, BaseModel):
-    email = None
-
     # USERNAME_FIELD = 'email'
     # REQUIRED_FIELDS = ['username']
 
