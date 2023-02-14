@@ -2,8 +2,8 @@ import sys
 from pathlib import Path
 
 #  BASE_DIR:        backend/
-#  MAIN_DIR:        backend/deprem
-#  THIS_DIR:        backend/deprem/settings
+#  MAIN_DIR:        backend/main
+#  THIS_DIR:        backend/main/settings
 CURRENT_DIR = Path(__file__).resolve().parent
 MAIN_DIR = CURRENT_DIR.parent
 BASE_DIR = CURRENT_DIR.parent.parent
@@ -52,7 +52,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'deprem.urls'
+ROOT_URLCONF = 'main.urls'
 AUTH_USER_MODEL = 'users.User'
 
 TEMPLATES = [
@@ -74,7 +74,8 @@ TEMPLATES = [
 ]
 
 
-WSGI_APPLICATION = 'deprem.wsgi.application'
+WSGI_APPLICATION = 'main.wsgi.application'
+ASGI_APPLICATION = 'main.asgi.application'
 
 
 # Database

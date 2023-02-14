@@ -2,7 +2,7 @@
 from django.contrib.auth.models import AbstractUser
 # from django.utils.translation import gettext_lazy as _
 
-from deprem.models import BaseModel
+from main.models import BaseModel
 
 
 class User(AbstractUser, BaseModel):

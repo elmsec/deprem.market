@@ -5,7 +5,7 @@ from rest_framework.decorators import action
 from rest_framework.response import Response
 
 from users.serializers import UserSerializer, UserCreateSerializer
-from deprem.permissions import IsSuperUserOrCanRegisterAndViewListOnly
+from main.permissions import IsSuperUserOrCanRegisterAndViewListOnly
 from rest_framework_simplejwt.tokens import RefreshToken
 
 
