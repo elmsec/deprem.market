@@ -26,6 +26,7 @@ SECRET_KEY = 'django-insecure-m0-9z9*h!8us%t4z=&w*b0f+#&6(^%&-q0o(7^xo7t*o(4#8*#
 DEBUG = True
 
 ALLOWED_HOSTS = []
+AUTH_USER_MODEL = 'users.User'
 
 # Application definition
 
@@ -38,6 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     'rest_framework',
+
+    'users.apps.UsersConfig',
 ]
 
 MIDDLEWARE = [
