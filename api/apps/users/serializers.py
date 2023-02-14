@@ -6,12 +6,9 @@ User = get_user_model()
 
 
 class UserSerializer(serializers.HyperlinkedModelSerializer):
-    confirm_password = serializers.CharField(
-        style={'input_type': 'password'}, write_only=True)
-
     class Meta:
         model = User
-        fields = [  # TODO: check fields for security
+        fields = [
             'url',
             'id',
             'username',
@@ -21,17 +18,12 @@ class UserSerializer(serializers.HyperlinkedModelSerializer):
             'is_active',
             'date_joined',
             'last_login',
-            'password',
-            'confirm_password',
         ]
         extra_kwargs = {
             'is_staff': {'read_only': True},
             'is_active': {'read_only': True},
             'date_joined': {'read_only': True},
             'last_login': {'read_only': True},
-            'password': {'write_only': True},
-            'first_name': {'required': False},
-            'last_name': {'required': False},
         }
 
 
