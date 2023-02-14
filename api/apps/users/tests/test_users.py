@@ -102,8 +102,6 @@ class UserTests(APITestCase):
             "first_name": "testuser-updated",
             "last_name": "testuser-updated",
             "email": "",
-            "password": "testpassword-updated",
-            "confirm_password": "testpassword-updated",
         }
         self.client.login(username="testuser", password="testpassword")
         response = self.client.put(url, data)
@@ -116,8 +114,6 @@ class UserTests(APITestCase):
             "first_name": "testuser-updated",
             "last_name": "testuser-updated",
             "email": "",
-            "password": "testpassword-updated",
-            "confirm_password": "testpassword-updated",
         }
         self.client.login(username="testadminuser", password="testpassword")
         response = self.client.put(url, data)
@@ -132,8 +128,6 @@ class UserTests(APITestCase):
             "first_name": "testuser-updated",
             "last_name": "testuser-updated",
             "email": "",
-            "password": "testpassword-updated",
-            "confirm_password": "testpassword-updated",
         }
         response = self.client.put(url, data)
         self.assertEqual(response.status_code, 401)
