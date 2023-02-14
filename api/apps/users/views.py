@@ -38,4 +38,4 @@ class UserViewSet(viewsets.ModelViewSet):
                 "refresh": str(refresh),
                 "access": str(refresh.access_token),
             }
-        })
+        }, status=201)
