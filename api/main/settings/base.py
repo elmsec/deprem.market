@@ -1,3 +1,4 @@
+import os
 import sys
 from pathlib import Path
 
@@ -18,10 +19,12 @@ sys.path.append(str(BASE_DIR / 'static'))
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-m0-9z9*h!8us%t4z=&w*b0f+#&6(^o7t*o(4#8*#'
+SECRET_KEY = os.getenv(
+    'SECRET_KEY',
+    'django-insecure-m0-9z9*h!8us%t4z=&w*b0f+#&6(^o7t*o(4#8*#')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = []
 AUTH_USER_MODEL = 'users.User'
