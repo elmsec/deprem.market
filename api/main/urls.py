@@ -23,21 +23,21 @@ router.register(r'categories', CategoryViewSet)
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('api/', include(router.urls)),
+    path('api/v1/', include(router.urls)),
     path(
-        'api/auth/',
+        'api/v1/auth/',
         include('rest_framework.urls', namespace='rest_framework'),
     ),
     path(
-        'api/auth/token/',
+        'api/v1/auth/token/',
         TokenObtainPairView.as_view(),
         name='token_obtain_pair'),
     path(
-        'api/auth/token/refresh/',
+        'api/v1/auth/token/refresh/',
         TokenRefreshView.as_view(),
         name='token_refresh'),
     path(
-        'api/auth/token/verify/',
+        'api/v1/auth/token/verify/',
         TokenVerifyView.as_view(),
         name='token_verify'),
 ]
