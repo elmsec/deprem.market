@@ -1,0 +1,5 @@
+# Create a copy of this file and rename it to "development.py"
+from .base import *
+
+DEBUG = True
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'depremmarket.local']
