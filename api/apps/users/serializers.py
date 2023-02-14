@@ -50,8 +50,10 @@ class UserCreateSerializer(serializers.ModelSerializer):
         ]
         extra_kwargs = {
             'password': {'write_only': True},
-            'first_name': {'required': False, 'allow_blank': True},
-            'last_name': {'required': False, 'allow_blank': True},
+            'first_name': {
+                'required': False, 'allow_blank': True, 'default': ''},
+            'last_name': {
+                'required': False, 'allow_blank': True, 'default': ''},
         }
 
     def save(self):
